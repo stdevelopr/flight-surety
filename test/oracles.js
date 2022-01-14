@@ -17,6 +17,16 @@ contract('Oracles', async (accounts) => {
     const STATUS_CODE_LATE_TECHNICAL = 40;
     const STATUS_CODE_LATE_OTHER = 50;
 
+
+    config.flightSuretyApp.contract.events.OracleRequest({}, (error, event) => {
+      console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDDDE!!!!!!")
+  });
+
+  config.flightSuretyApp.contract.events.OracleReport({}, (error, event) => {
+    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+});
+
+
   });
 
 
@@ -24,7 +34,6 @@ contract('Oracles', async (accounts) => {
     
     // ARRANGE
     let fee = await config.flightSuretyApp.REGISTRATION_FEE.call();
-
     // ACT
     for(let a=1; a<TEST_ORACLES_COUNT; a++) {      
       await config.flightSuretyApp.registerOracle({ from: accounts[a], value: fee });
@@ -51,6 +60,11 @@ contract('Oracles', async (accounts) => {
 
       // Get oracle information
       let oracleIndexes = await config.flightSuretyApp.getMyIndexes.call({ from: accounts[a]});
+      console.log("INNNNDEXEXEX", typeof oracleIndexes)
+      for(k in oracleIndexes){
+        console.log("WWWW", k)
+      }
+
       for(let idx=0;idx<3;idx++) {
 
         try {

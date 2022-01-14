@@ -2,6 +2,11 @@
 
 FlightSurety is a sample application project for Udacity's Blockchain course.
 
+Rules:
+
+- When contract is deployed the owner of the contract is registered as the first airline. 
+To register the next airline the airline address must be funded first by a minimum amount of 10 ether.
+
 ## Install
 
 This repository contains Smart Contract code in Solidity (using Truffle), tests (also using Truffle), dApp scaffolding (using HTML, CSS and JS) and server app scaffolding.

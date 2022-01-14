@@ -18,15 +18,107 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-
+  
     <main class="container">
 
+      <div style="margin-top: 40px;">
         <div id="display-wrapper" class="top-20">
+          <h2>Operational Status</h2>
+          <div class="row">
+            <div class="col-sm-3 field">
+              Operational Status
+            </div>
+            <div class="col-sm-8 field-value" id="status">
+              true
+            </div>
+
+          </div>
         </div>
-        <div class="row top-20">
-            <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+        <h5>Set Operational Status: </h5>
+        <btn class="btn btn-primary" id="operational-true">TRUE</btn>
+        <btn class="btn btn-primary" id="operational-false" style="margin-left: 10px;">FALSE</btn>
+    </div>
+      <div style="margin-top: 40px;">
+        <h5>Owner address: </h5>
+        <div id="ownerAddress">
         </div>
-    </main>
+    </div>
+      <h2>Airline Registration</h2>
+      
+      <div class="row top-20">
+          <input type="text" id="airline-name" placeholder="Airline Name">
+          <input type="text" id="airline-address" style="width: 400px;" placeholder="Airline Address">
+          <btn class="btn btn-primary" id="register-airline">Register</btn>
+      </div>
+
+      </div>
+      <div class="row top-20">
+          <label class="form">Action over Airline</label>
+          <input type="text" id="airline-actions-address" style="width: 400px;" placeholder="Airline Address">
+          <btn class="btn btn-primary" id="fund-airline">Fund</btn>
+          <btn class="btn btn-primary" id="vote-airline" style="margin-left: 10px;">Vote</btn>
+          <btn class="btn btn-primary" id="verify-register" style="margin-left: 10px;">Is Registered</btn>
+          <btn class="btn btn-primary" id="verify-fund" style="margin-left: 10px;">Is Funded</btn>
+          <btn class="btn btn-primary" id="verify-pending" style="margin-left: 10px;">Is Pending</btn>
+      </div>
+
+      <div style="margin-top: 40px;">
+          <h5>Results:</h5>
+          <div id="display-wrapper-register">
+
+          </div>
+      </div>
+  </main>
+
+  <main class="container" class="top-20">
+    <h2>Buy Insurance</h2>
+    
+    <div class="row top-20">
+        <input type="text" id="flight-number" placeholder="Flight Number" style="width: 400px;">
+    </div>
+
+    <div class="row top-20">
+        <input type="text" id="insurance-airline" placeholder="Airline Address" style="width: 400px;">
+    </div>
+
+    <div class="row top-20">
+        <input type="text" id="insurance-amount" placeholder="1 ETH or less" style="width: 400px;">
+    </div>
+    <div class="row top-20">
+      <input type="text" id="insurance-timestamp" placeholder="timestamp" style="width: 400px;">
+  </div>
+    <div class="row top-20">
+        <btn class="btn btn-primary" id="submit-buy">Buy Insurance</btn>
+        <btn class="btn btn-primary" id="submit-oracle" style="margin-left: 10px;">Update Flight Status (Late Airline)</btn>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <h5>Results:</h5>
+        <div id="display-wrapper-buy">
+
+        </div>
+    </div>
+</main>
+
+<main class="container" class="top-20">
+  <h2>Passenger Detail</h2>
+
+  <div class="row top-20">
+      <label class="form">Check Balance</label>
+      <input type="text" id="passanger-address" placeholder="Passenger Address" style="width: 400px;">
+      <btn class="btn btn-primary" id="check-balance">Check Credit Pending to Withdraw</btn>
+      <btn class="btn btn-primary" id="withdraw-balance" style="margin-left: 10px;">Withdraw</btn>
+  </div>
+
+  <div style="margin-top: 40px;">
+      <h5>Results:</h5>
+      <div id="display-wrapper-passenger-detail">
+
+      </div>
+  </div>
+</main>
+
+  
 
 </body>
 
